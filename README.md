@@ -34,11 +34,13 @@ This project shows how cloud-scale data + ML can solve operational pain points.
 
 ## 📁 Project Structure
 
-- 'aws_pipeline/'          # Glue scripts & Athena SQL for ETL
-- 'model/'                # XGBoost training, feature engineering, export
-- 'powerbi/'               # Dashboard walkthrough & visuals
+<pre>
+aws_pipeline/          # Glue scripts & Athena SQL for ETL
+model/                 # XGBoost training, feature engineering, export
+powerbi/               # Dashboard walkthrough & visuals
+</pre>
 
----
+--- 
 
 ## 🌟 Key Results Summary
 
