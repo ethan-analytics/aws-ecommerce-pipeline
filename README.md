@@ -14,7 +14,8 @@ This project shows how cloud-scale data + ML can solve operational pain points.
 
 ## 📂 Dataset
 
-This project uses the real **Olist E-Commerce Dataset** from Kaggle, containing ~1.5M records across multiple tables, including:
+This project uses the real **Olist E-Commerce Dataset** from Kaggle, containing ~1.5M records across multiple tables.
+
 Source: Kaggle — Olist Brazilian E-Commerce Public Dataset.
 
 ---
