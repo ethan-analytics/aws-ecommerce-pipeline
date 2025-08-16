@@ -1,87 +1,83 @@
-# Delivery Delay Prediction Pipeline (AWS + Power BI)
+# 🚚 Delivery Delay Prediction Pipeline (AWS + Power BI)
 
-End-to-end project predicting late deliveries on the Olist e-commerce dataset. Data is ingested and prepared on AWS (S3, Glue, Athena), modeled with XGBoost, and visualized in Power BI for business storytelling.
-
----
-
-## Executive Summary
-
-- Processed 5M+ transactions with AWS S3 + Glue + Athena.
-- Trained an XGBoost classifier with class-imbalance handling and a decision threshold of **0.25** to prioritize recall.
-- **Results:** Base delay rate ≈ **6.6%**, **Recall ≈ 99%**, **Precision ≈ 6.7%**.
-- Delivered a compact Power BI dashboard (KPI cards, confusion matrix, probability distribution).
+This project builds an **end-to-end data pipeline and predictive model** for late delivery detection using the **Olist e-commerce dataset**. It demonstrates large-scale data handling on AWS, machine learning with XGBoost, and business-focused storytelling with Power BI.
 
 ---
 
-## Tech Stack
+## 💼 Problem Context
 
-| Layer | Tools |
-|------|------|
-| Data | AWS S3, AWS Glue (PySpark), AWS Athena (SQL) |
-| ML   | XGBoost (SageMaker/Notebook), threshold tuning, imbalance handling |
-| Viz  | Power BI (KPI cards, confusion matrix, histogram) |
-| Ops  | (Optional) FastAPI endpoint, AWS Step Functions, QuickSight |
+E-commerce companies face rising **customer dissatisfaction** due to late deliveries. The challenge is to **predict high-risk orders early** and trigger mitigation steps (e.g., expedited shipping, proactive customer notifications).
+
+This project shows how cloud-scale data + ML can solve operational pain points.
 
 ---
 
-## Project Structure
+## 📌 Executive Summary
 
-/aws_pipeline
-  ├── glue_jobs/            # Glue scripts for raw → curated tables
-  ├── athena_queries/       # SQL queries to explore and prepare data
-/model
-  ├── model_training.ipynb  # Notebook: feature engineering, model training, export
-  └── feature_importance.csv
-/powerbi
-  ├── README.md             # Dashboard walkthrough
-  └── visuals/              # Images of Confusion Matrix, Histogram, KPI cards
+- **Data Scale**: Processed 5M+ Olist transactions on AWS (S3 + Glue + Athena).  
+- **Model**: Trained XGBoost with imbalance handling, tuned for **recall priority**.  
+- **Results**: Base delay ≈ **6.6%**, **Recall ≈ 99%**, **Precision ≈ 6.7%**, **AUC ≈ 0.585**.  
+- **Visualization**: Delivered an interactive Power BI dashboard (KPIs, confusion matrix, distribution analysis).  
 
+> **Business takeaway**: Use as an *early-warning system* to flag risky orders, reducing missed delays.
 
 ---
 
-## Visual Highlights & Insights
+## 🛠️ Tech Stack
+
+- **Cloud & Data**: AWS S3, AWS Glue (PySpark), AWS Athena (SQL)  
+- **Machine Learning**: XGBoost (threshold tuning, imbalance handling)  
+- **Visualization**: Power BI (KPI cards, confusion matrix, histograms)  
+- **Optional Ops**: FastAPI endpoint, AWS Step Functions, QuickSight  
+
+---
+
+## 📁 Project Structure
+
+aws_pipeline/          # Glue scripts & Athena SQL for ETL
+model/                 # XGBoost training, feature engineering, export
+powerbi/               # Dashboard walkthrough & visuals
+(put three backticks here)
+
+---
+
+## 🌟 Key Results Summary
+
+| Metric                  | Value   |
+|--------------------------|---------|
+| Base Delay Rate          | ~6.6%   |
+| Recall (t=0.25)          | ~99%    |
+| Precision (t=0.25)       | ~6.7%   |
+| AUC                      | ~0.585  |
+
+---
+
+## 📊 Visual Highlights & Insights
 
 ### KPI Cards
-![KPI and Metrics](visuals/KPI_and_metrics.png)
-
-**Interpretation:** Base delay rate is ~6.6%. At threshold 0.25 the model emphasizes **recall (~99%)** to avoid missing delayed orders, with expected low precision (~6.7%).
+![KPI](powerbi/visuals/KPI_and_metrics.png)  
+> Shows overall base delay rate (~6.6%). Recall-focused threshold ensures nearly all late orders are flagged.
 
 ### Confusion Matrix
-![Confusion Matrix](visuals/Confusion_matrix.png)
+![Confusion Matrix](powerbi/visuals/Confusion_matrix.png)  
+> Captures almost all delayed orders (low FN) at the cost of more false positives — appropriate in logistics risk contexts.
 
-High recall means we capture almost all delayed orders (few FN) but raise many false positives—appropriate when the cost of a missed delay is high.
-
-### Delay-Probability Histogram
-![Distribution of Predicted Delay Probabilities](visuals/Distribution_of_predicted_delay_probabilities.png)
-
-Shows how predicted probabilities cluster (e.g., around 0.45–0.55) and how actual delays distribute across bins.
+### Delay Probability Distribution
+![Histogram](powerbi/visuals/Distribution_of_predicted_delay_probabilities.png)  
+> Visualizes how predictions cluster, highlighting mid-range uncertainty where business rules can intervene.
 
 ---
 
-## Results
+## ⚠️ Limitations & Future Work
 
-| Metric        | Value  |
-|---------------|--------|
-| Base Rate     | ~6.6%  |
-| Recall (t=0.25)   | ~99%  |
-| Precision (t=0.25)| ~6.7% |
-| AUC           | ~0.585 |
-
-**Business take:** Use the model as an *early-warning* system. Investigate high-risk orders and apply operational mitigations (expedite, notify customer, prioritize packing).
+- Precision is low due to extreme recall bias — future work will explore **threshold tuning dashboards** in Power BI.  
+- Feature importance (e.g., shipping distance, product type) to be visualized for transparency.  
+- Deployment as **FastAPI service** for real-time integration with e-commerce systems.  
 
 ---
 
-## Future Work
+## 🔗 Author
 
-- Add **Feature Importance** bar chart (export `feature_importance.csv` from notebook).
-- Add a **What-If** threshold slider in Power BI to show precision/recall trade-offs.
-- Package model behind a **FastAPI** endpoint for batch/real-time scoring.
-
----
-
-## Author
-
-**Ethan Choo** — Singapore  
-Data Science & Business Analytics (SIM–UOL)  
-LinkedIn: https://www.linkedin.com/in/ethanchoo5
-
+**Ethan Choo**  
+📍 Singapore | 🎓 Data Science & Business Analytics Graduate (SIM-UOL)  
+🔗 [LinkedIn](https://www.linkedin.com/in/ethanchoo5/) | 🔗 [GitHub](https://github.com/ethan-analytics)
