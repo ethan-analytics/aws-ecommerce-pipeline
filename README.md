@@ -1,4 +1,4 @@
-# 🚚 Delivery Delay Prediction Pipeline (AWS + Power BI)
+# 🚚 E-Commerce Delay Prediction Pipeline (AWS) 
 
 This project builds an **end-to-end data pipeline and predictive model** for late delivery detection using the **Olist e-commerce dataset**. It demonstrates large-scale data handling on AWS, machine learning with XGBoost, and business-focused storytelling with Power BI.
 
@@ -28,7 +28,6 @@ This project shows how cloud-scale data + ML can solve operational pain points.
 - **Cloud & Data**: AWS S3, AWS Glue (PySpark), AWS Athena (SQL)  
 - **Machine Learning**: XGBoost (threshold tuning, imbalance handling)  
 - **Visualization**: Power BI (KPI cards, confusion matrix, histograms)  
-- **Optional Ops**: FastAPI endpoint, AWS Step Functions, QuickSight  
 
 ---
 
@@ -37,6 +36,12 @@ This project shows how cloud-scale data + ML can solve operational pain points.
 - `aws_pipeline/` — Glue scripts & Athena SQL for ETL  
 - `model/` — XGBoost training, feature engineering, export  
 - `powerbi/` — Dashboard walkthrough & visuals  
+
+--- 
+
+## 🧠 Modeling  
+- Trained an XGBoost model on processed features to predict delivery delays.  
+- The pipeline can be easily extended to include **feature importance visualization**, offering interpretable insights into key drivers of delays
 
 --- 
 
