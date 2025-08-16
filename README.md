@@ -12,6 +12,20 @@ This project shows how cloud-scale data + ML can solve operational pain points.
 
 ---
 
+## 📂 Dataset
+
+This project uses the real **Olist E-Commerce Dataset** from Kaggle, containing ~1.5M records across multiple tables, including:
+
+- Customers  
+- Orders  
+- Payments  
+- Reviews  
+- Products  
+- Sellers  
+- Geolocation
+
+---
+
 ## 📌 Executive Summary
 
 - **Data Scale**: Processed 5M+ Olist transactions on AWS (S3 + Glue + Athena).  
