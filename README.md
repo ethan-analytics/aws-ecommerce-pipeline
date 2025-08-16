@@ -50,9 +50,19 @@ Source: Kaggle — Olist Brazilian E-Commerce Public Dataset.
 
 ## 🧠 Modeling  
 - Trained an XGBoost model on processed features to predict delivery delays.  
+- **Feature Engineering**: Derived variables such as shipping times, review scores, lag features (e.g., lag7), and rolling averages (e.g., ma7) to improve predictive power.  
 - The pipeline can be easily extended to include **feature importance visualization**, offering interpretable insights into key drivers of delays.
 
 --- 
+
+## 🗄️ Data Engineering (ETL)
+
+- Ingested raw Olist tables into **S3** (raw zone).  
+- Built Glue ETL jobs to join and transform multi-table data.  
+- Produced **dimension tables** (customers, products, sellers) and **fact tables** (orders, order items) in curated Parquet format, partitioned by purchase date/state for efficiency.  
+- Registered all tables in the **Glue Data Catalog** for querying via Athena.
+
+---
 
 ## 🌟 Key Results Summary
 
