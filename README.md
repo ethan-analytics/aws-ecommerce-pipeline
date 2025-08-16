@@ -42,17 +42,17 @@ End-to-end project predicting late deliveries on the Olist e-commerce dataset. D
 ## Visual Highlights & Insights
 
 ### KPI Cards
-![KPIs](powerbi/visuals/kpi_cards.png)
+![KPI and Metrics](visuals/KPI_and_metrics.png)
 
 **Interpretation:** Base delay rate is ~6.6%. At threshold 0.25 the model emphasizes **recall (~99%)** to avoid missing delayed orders, with expected low precision (~6.7%).
 
 ### Confusion Matrix
-![Confusion Matrix](powerbi/visuals/confusion_matrix.png)
+![Confusion Matrix](visuals/Confusion_matrix.png)
 
 High recall means we capture almost all delayed orders (few FN) but raise many false positives—appropriate when the cost of a missed delay is high.
 
 ### Delay-Probability Histogram
-![Histogram](powerbi/visuals/histogram.png)
+![Distribution of Predicted Delay Probabilities](visuals/Distribution_of_predicted_delay_probabilities.png)
 
 Shows how predicted probabilities cluster (e.g., around 0.45–0.55) and how actual delays distribute across bins.
 
