@@ -55,15 +55,15 @@ powerbi/               # Dashboard walkthrough & visuals
 ## 📊 Visual Highlights & Insights
 
 ### KPI Cards
-![KPI](powerbi/visuals/KPI_and_metrics.png)  
+![KPI and Metrics](visuals/KPI_and_metrics.png) 
 > Shows overall base delay rate (~6.6%). Recall-focused threshold ensures nearly all late orders are flagged.
 
 ### Confusion Matrix
-![Confusion Matrix](powerbi/visuals/Confusion_matrix.png)  
+![Confusion Matrix](visuals/Confusion_matrix.png)
 > Captures almost all delayed orders (low FN) at the cost of more false positives — appropriate in logistics risk contexts.
 
 ### Delay Probability Distribution
-![Histogram](powerbi/visuals/Distribution_of_predicted_delay_probabilities.png)  
+![Distribution of Predicted Delay Probabilities](visuals/Distribution_of_predicted_delay_probabilities.png)
 > Visualizes how predictions cluster, highlighting mid-range uncertainty where business rules can intervene.
 
 ---
