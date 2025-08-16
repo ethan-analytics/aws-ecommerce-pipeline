@@ -44,8 +44,9 @@ Source: Kaggle — Olist Brazilian E-Commerce Public Dataset.
 
 - `aws_pipeline/` — Glue scripts & Athena SQL for ETL  
 - `model/` — XGBoost training, feature engineering, export  
-- `powerbi/` — Dashboard walkthrough & visuals  
-
+- `powerbi/` — Dashboard walkthrough  
+- `visuals/` — Power BI screenshots (KPI, confusion matrix, probability distribution)
+  
 --- 
 
 ## 🧠 Modeling  
