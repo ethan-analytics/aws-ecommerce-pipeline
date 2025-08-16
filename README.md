@@ -28,7 +28,7 @@ This project uses the real **Olist E-Commerce Dataset** from Kaggle, containing 
 
 ## 📌 Executive Summary
 
-- **Data Scale**: Processed 5M+ Olist transactions on AWS (S3 + Glue + Athena).  
+- **Data Scale**: Processed 1.5M+ Olist transactions on AWS (S3 + Glue + Athena).  
 - **Model**: Trained XGBoost with imbalance handling, tuned for **recall priority**.  
 - **Results**: Base delay ≈ **6.6%**, **Recall ≈ 99%**, **Precision ≈ 6.7%**, **AUC ≈ 0.585**.  
 - **Visualization**: Delivered an interactive Power BI dashboard (KPIs, confusion matrix, distribution analysis).  
