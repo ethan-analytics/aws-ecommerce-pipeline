@@ -28,7 +28,7 @@ This project uses the real **Olist E-Commerce Dataset** from Kaggle, containing 
 
 ## 📌 Executive Summary
 
-- **Data Scale**: Processed 1.5M+ Olist transactions on AWS (S3 + Glue + Athena).  
+- **Data Scale**: Processed ~1.5M Olist records on AWS (S3 + Glue + Athena).  
 - **Model**: Trained XGBoost with imbalance handling, tuned for **recall priority**.  
 - **Results**: Base delay ≈ **6.6%**, **Recall ≈ 99%**, **Precision ≈ 6.7%**, **AUC ≈ 0.585**.  
 - **Visualization**: Delivered an interactive Power BI dashboard (KPIs, confusion matrix, distribution analysis).  
@@ -39,9 +39,10 @@ This project uses the real **Olist E-Commerce Dataset** from Kaggle, containing 
 
 ## 🛠️ Tech Stack
 
-- **Cloud & Data**: AWS S3, AWS Glue (PySpark), AWS Athena (SQL)  
-- **Machine Learning**: XGBoost (threshold tuning, imbalance handling)  
-- **Visualization**: Power BI (KPI cards, confusion matrix, histograms)  
+- **Cloud & Data**: S3 (raw/curated zones), Glue Jobs & Crawlers, Glue Data Catalog, Athena (CTAS, Parquet)
+- **ML/Compute**: PySpark, Python (Pandas, scikit-learn), XGBoost (threshold tuning, class imbalance)
+- **Security/Access**: IAM roles & policies
+- **Visualization**: Power BI (KPI cards, confusion matrix, histograms)
 
 ---
 
@@ -55,7 +56,7 @@ This project uses the real **Olist E-Commerce Dataset** from Kaggle, containing 
 
 ## 🧠 Modeling  
 - Trained an XGBoost model on processed features to predict delivery delays.  
-- The pipeline can be easily extended to include **feature importance visualization**, offering interpretable insights into key drivers of delays
+- The pipeline can be easily extended to include **feature importance visualization**, offering interpretable insights into key drivers of delays.
 
 --- 
 
